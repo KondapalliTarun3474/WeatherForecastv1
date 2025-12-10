@@ -1,0 +1,9 @@
+Flask
+Flask-Cors
+torch
+transformers
+requests
+python-json-logger
+pandas
+numpy
+
