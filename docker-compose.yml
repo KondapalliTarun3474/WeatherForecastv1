@@ -1,0 +1,18 @@
+version: '3.8'
+services:
+  backend:
+    build: 
+      context: ./mlops-llm4ts/model-service
+    ports:
+      - "5000:5000"
+    container_name: llm4ts-backend
+    restart: on-failure
+
+  frontend:
+    build: 
+      context: ./mlops-forecast-frontend
+    ports:
+      - "8080:80"
+    container_name: mlops-forecast-frontend
+    depends_on:
+      - backend
